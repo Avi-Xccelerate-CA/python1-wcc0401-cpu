@@ -14,5 +14,27 @@
 def dose(needs):
     #YOUR SOLUTION STARTS HERE
 caaa
+    
+    if total_needs > 500:
+        return "No medicine given"
+    
+    medicine_list = []
+    vitamins = 0
+    attribute = 0
+    for attribute in needs:
+        if attribute >= 250:
+            return "No medicine given"
+        vitamins = attribute // 10
+        
+        if attribute % 10 !=0:
+            vitamins += 1
+        injections = vitamins*10 - attribute
+        print(injections, vitamins)
+        medicine_list.append((vitamins, injections))
+
+    return medicine_list
+
+# print(dose([250, 0, 250, 0, 0, 0]))
+
     #YOUR SOLUTION ENDS HERE
 
